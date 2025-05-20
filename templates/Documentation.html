@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REC: Regular Expression Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cssDocumentation/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logoimages/icon.png') }}">
+</head>
+<body>
+
+    <div class="floating-container"></div> 
+
+    <div class="back-button" onclick="history.back()">
+        <div class="circle">
+            <img src="{{ url_for('static', filename='logoimages/backbutton.png') }}" alt="Back Arrow">
+            <b class="back">Back</b>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div class="title-container">
+            <h1>Documentation</h1>
+        </div>
+
+        <div class="container">
+            <p class="project">Introduction</p>  
+            <p class="given">
+                This project was developed by Aivee Varias, Jann Nicole San Jose, Timothy Sicad, and Xian Palomares 
+                as part of the requirements for the course <i>Automata Theory and Formal Language</i>. It presents a <i>Deterministic Finite Automaton (DFA) solver</i>, 
+                designed to analyze and determine whether given strings are accepted based on predefined state transitions and acceptance criteria.
+            </p>
+            <p class="given">
+                The DFA solver serves as a computational model that systematically processes input strings and evaluates their validity within a structured framework. 
+                By implementing deterministic state transitions, the solver ensures precise and unambiguous results, making it a valuable tool for understanding foundational concepts in formal language theory.
+            </p>
+            <p class="given">
+                This project not only demonstrates the practical application of DFA principles but also highlights the significance of automata in various computational and real-world scenarios, 
+                such as <i>lexical analysis in programming languages</i> and <i>pattern recognition in data processing</i>. Through this endeavor, 
+                the team aims to enhance comprehension of automata theory while providing an interactive approach to exploring finite state machines.
+            </p>
+            
+            <hr class="section-divider">
+            <p class="project">Regular Expression (RegEx)</p>  
+            <p class="given">
+            Regular expressions are used to match character combinations in strings. It is a sequence of patterns that defines a string. The symbols that appear in regular expressions 
+            are the letters of the alphabet, the symbol for the null string, parentheses, the kleene star operator, and the plus sign
+            </p>
+            <p class="subtitle">Regular Expression (a & b)</p>  
+            <img src="{{ url_for('static', filename='images/REGEX1.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <p class="subtitle">Regular Expression (0 & 1)</p>  
+            <img src="{{ url_for('static', filename='images/REGEX2.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <hr class="section-divider">
+            <p class="project">Deterministic Finite Automata (DFA)</p>
+            <p class="given">
+             According to Sisense (2025), Deterministic Finite Automata (DFA) are finite state machines that accept or reject strings of characters by parsing them through a sequence 
+             that is uniquely determined by each string. In DFA, for each input symbol, one can determine the state to which the machine will move. The transition from a state is to a 
+             single particular next state for each input symbol. This means that each string and each state sequence is unique. Hence, it is called deterministic. 
+            </p>
+
+            <p class="given">DFA is represented by state diagram which is made up of five components:</p>
+            <ul class="custom-list">
+                <li>A finite number of states, represented by vertices</li>
+                <li>A set of symbols known as the alphabet, also finite in number</li>
+                <li>The arcs labeled with an input alphabet show the transitions</li>
+                <li>The initial state where the first input is given or processed, denoted by minus/negative sign (-)</li>
+                <li>The final state or states, known as accepting states, denoted by plus/positive sign (+)</li>
+            </ul>
+            <p class="given">
+            In this project, the DFA is converted based on the given regular expression. The string of symbols is parsed through the DFA automata, and each input symbol will move to the 
+            next state that can be determined. A string is accepted by a DFA if the DFA starting at the initial state ends in any of the final states after reading the whole string. 
+            This DFA will be used to determine and simulate whether a user’s input is valid or invalid.
+            </p>
+
+            <hr class="section-divider">
+            <p class="project">Context-Free Grammar (CFG)</p>  
+            <p class="given">
+            Regular expressions are used to match character combinations in strings. It is a sequence of patterns that defines a string. The symbols that appear in regular expressions 
+            are the letters of the alphabet, the symbol for the null string, parentheses, the kleene star operator, and the plus sign
+            </p>
+
+            <p class="subtitle">Context-Free Grammar (a & b)</p>  
+            <img src="{{ url_for('static', filename='images/CFG1.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <p class="subtitle">Context-Free Grammar (0 & 1)</p>  
+            <img src="{{ url_for('static', filename='images/CFG2.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <hr class="section-divider">
+            <p class="project">Pushdown Automata (PDA)</p>  
+            <p class="given">
+            Regular expressions are used to match character combinations in strings. It is a sequence of patterns that defines a string. The symbols that appear in regular expressions 
+            are the letters of the alphabet, the symbol for the null string, parentheses, the kleene star operator, and the plus sign
+            </p>
+
+            <p class="subtitle">Pushdown Automata (a & b)</p>  
+            <img src="{{ url_for('static', filename='images/PDA1.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <p class="subtitle">Pushdown Automata (0 & 1)</p>  
+            <img src="{{ url_for('static', filename='images/PDA2n.png') }}" alt="REGEX">
+            <p class="given">
+                
+            </p>
+
+            <hr class="section-divider">
+            <p class="project">User's Manual</p>  
+            <p class="given">
+            Welcome to the Regular Expression Converter Web Application User’s Manual. This guide is designed to help users navigate and utilize the features of our web-based application 
+            developed for converting Regular Expressions into their equivalent Deterministic Finite Automata (DFA), Context-Free Grammar (CFG), and Pushdown Automata (PDA) representations.
+            </p>
+
+            <p class="given">
+            This application was created to support students and learners in better understanding formal language theory and automata concepts by providing an interactive platform for simulation 
+            and visualization. Whether you're a beginner exploring the basics of regular expressions or a student needing visual aids for DFA, CFG, or PDA, this manual will walk you through every component of the system.
+            </p>
+
+            <p class="given">By following this manual, users will gain insights into how to:</p>
+            <ul class="custom-list">
+                <li>Navigate different pages such as Home, ABout, Tutorial, and Documentation</li>
+                <li>Use the simulation features for two types of regular expression (a&b or 0&1)</li>
+                <li>Interpret DFA transitions with animated and visual feedback</li>
+                <li>View corresponding CFG and PDA of the given regular expressions</li>
+                <li>And efficiently clear or reset inputs</li>
+            </ul>
+
+            <p class="given">
+            This manual ensures that the users can make full use of the system with ease and confidence by providing step-by-step  guidance, clear explanations, and detailed descriptions of each feature available in the web application. 
+            </p>
+ 
+            <p class="user-subtitle">Exploring Home Page</p>  
+            <p class="user-given">
+            Upon accessing the web application, you are greeted with the Home Page, which contains the following sections:</p>
+
+            <ol type="A" class="custom-lists">
+                <li>
+                Navigation Menu
+                    <ul class="unlisted">
+                        <li>
+                            <span class="item-title">Home</span>
+                            <span class="item-desc"> - returns you to the main page</span>
+                        </li>
+                        <li>
+                            <span class="item-title">About</span>
+                            <span class="item-desc"> - you will learn about the project and developers</span>
+                        </li>
+                        <li>
+                            <span class="item-title">Tutorial</span>
+                            <span class="item-desc"> - you can watch a guide on how to use the web app</span>
+                        </li>
+                        <li>
+                        <span class="item-title">Documentation</span>
+                        <span class="item-desc"> - you can read definitions and technical references</span>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                Get Started Button<br>
+                <p class="item-desc">Leads you to two options:</p>
+                    <ul class="unlisted">
+
+                        <li>
+                            <span class="item-title">Option 1:</span>
+                            <span class="item-desc"> Regular Expression using ‘a’  and ‘b’</span>
+                        </li>
+                        <li>
+                            <span class="item-title">Option 2:</span>
+                            <span class="item-desc"> Regular Expression using ‘0’ and ‘1’</span>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p class="user-subtitle">Exploring About Page</p>  
+            <p class="user-given">
+            In the About Page the you will find:</p>
+                <ul class="unlisted">
+                    <li>
+                        <span class="item-title">About Us</span>
+                        <span class="item-desc"> - you  can view the details about the development team</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Project Overview</span>
+                        <span class="item-desc"> - you will know the purpose of this web applications, 
+                            which is to convert regular expressions into Deterministic Finite Automata (DFA), Context-Free Grammar (CFG), and Pushdown Automata (PDA).</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Back Button</span>
+                        <span class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the Home Page.</span>
+                    </li>
+                </ul>
+
+            <p class="user-subtitle">Exploring Tutorial Page</p>  
+            <p class="user-given">
+            In the Tutorial Page, you can:</p>
+                <ul class="unlisted">
+                    <li>
+                        <span class="item-title">Video</span>
+                        <span class="item-desc"> - you can watch an instructional video that shows how to use all the features of the web application.</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Back Button</span>
+                        <span class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the Home Page.</span>
+                    </li>
+                </ul>
+
+            <p class="user-subtitle">Exploring Documentation Page</p>  
+            <p class="user-given">
+            The Documentation Page contains:</p>
+
+            <ol type="A" class="custom-lists">
+                <li>
+                Definitions and Explanations of:
+                    <ul class="unlisted">
+                        <li>
+                            <span class="item-titles">Regular Expression</span>
+                        </li>
+                        <li>
+                            <span class="item-titles">Deterministic Finite Automata (DFA)</span>
+                        </li>
+                        <li>
+                            <span class="item-titles">Context-Free Grammar (CFG)</span>
+                        </li>
+                        <li>
+                            <span class="item-titles">Pushdown Automata (PDA)</span>
+                        </li>
+                        <li>
+                        <span class="item-titles">Documentation</span>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                User’s Manual
+                <p class="item-desc"> - the guide is also available in this section</p>
+                </li>
+                <li>
+                Illustrations
+                <p class="item-desc"> - you can view the visual representation of DFA, CFG, and PDA</p>
+                </li>
+                <li>
+                Back Button
+                <p class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the Home Page.</p>
+                </li>
+            </ol>
+
+            <p class="user-subtitle">Get Started</p>  
+            <p class="user-given">
+            Clicking the Get Started on the Home Page it will lead you to a selection page with two options:</p>
+                <ul class="unlisted">
+                    <li>
+                        <span class="item-title">Option 1:</span>
+                        <span class="item-desc"> - Regular Expression using ‘a’ and ‘b’</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Option 2:</span>
+                        <span class="item-desc"> - Regular Expression using ‘0’ and ‘1’</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Back Button</span>
+                        <span class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the Home Page.</span>
+                    </li>
+                </ul>
+
+            <p class="user-subtitle">Option 1: Regular Expression 1 (a & b)</p>  
+            <p class="user-given">
+            This page allows you to interact with a DFA simulator:</p>
+
+            <ol type="A" class="custom-lists">
+                <li>
+                Input Section:
+                    <ul class="unlisted">
+                        <li class="item-titles">5  individual containers to enter strings containing variables a and b</li>
+                        <li class="item-titles">Each input has a Simulate button to process the string</li>
+                        <li class="item-titles">Result Box shows whether the inputted string is Valid or Invalid</li>
+                        <li>
+                            <span class="item-title">About</span>
+                            <span class="item-desc"> - you will learn about the project and developers</span>
+                        </li>
+                        <li>
+                            <span class="item-title">Tutorial</span>
+                            <span class="item-desc"> - you can watch a guide on how to use the web app</span>
+                        </li>
+                        <li>
+                        <span class="item-title">Documentation</span>
+                        <span class="item-desc"> - you can read definitions and technical references</span>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                DFA Visualization:
+                    <ul class="unlisted">
+                        <li class="item-titles">An animated graph displays the DFA and process for each string</li>
+                       <li class="item-titles">Arrows and nodes highlight the transition </li>
+                    </ul>
+                </li>
+
+                <li>
+                Additional Features:
+                    <ul class="unlisted">
+                        <li>
+                            <span class="item-title">Clear Button</span>
+                            <span class="item-desc"> - clears all 5 inputs</span>
+                        </li>
+                        <li>
+                            <span class="item-title">CFG Button</span>
+                            <span class="item-desc"> - shows the CFG of the regular expression (a & b)</span>
+                        </li>
+                        <li>
+                            <span class="item-title">PDA Button </span>
+                            <span class="item-desc"> - shows the PDA of the regular  expression (a & b)</span>
+                        </li>
+                        <li>
+                        <span class="item-title">Back Button</span>
+                        <span class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the DFA Simulation.</span>
+                        </li>
+                    </ul>
+                </li>
+
+            <p class="user-subtitle">Option 2: Regular Expression 2 (0 & 1)</p>  
+            <p class="user-given">
+            This page allows you to interact with a DFA simulator:</p>
+
+            <ol type="A" class="custom-lists">
+                <li>
+                Input Section:
+                    <ul class="unlisted">
+                        <li class="item-titles">5  individual containers to enter strings containing variables 0 and 1</li>
+                        <li class="item-titles">Each input has a Simulate button to process the string</li>
+                        <li class="item-titles">Result Box shows whether the inputted string is Valid or Invalid</li>
+                        <li>
+                            <span class="item-title">About</span>
+                            <span class="item-desc"> - you will learn about the project and developers</span>
+                        </li>
+                        <li>
+                            <span class="item-title">Tutorial</span>
+                            <span class="item-desc"> - you can watch a guide on how to use the web app</span>
+                        </li>
+                        <li>
+                        <span class="item-title">Documentation</span>
+                        <span class="item-desc"> - you can read definitions and technical references</span>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                DFA Visualization:
+                    <ul class="unlisted">
+                        <li class="item-titles">An animated graph displays the DFA and process for each string</li>
+                       <li class="item-titles">Arrows and nodes highlight the transition </li>
+                    </ul>
+                </li>
+
+                <li>
+                Additional Features:
+                    <ul class="unlisted">
+                        <li>
+                            <span class="item-title">Clear Button</span>
+                            <span class="item-desc"> - clears all 5 inputs</span>
+                        </li>
+                        <li>
+                            <span class="item-title">CFG Button</span>
+                            <span class="item-desc"> - shows the CFG of the regular expression (0 & 1)</span>
+                        </li>
+                        <li>
+                            <span class="item-title">PDA Button </span>
+                            <span class="item-desc"> - shows the PDA of the regular  expression (0 & 1)</span>
+                        </li>
+                        <li>
+                        <span class="item-title">Back Button</span>
+                        <span class="item-desc"> - you can see the back button above the top of the page, when you click it, they will return to the DFA Simulation.</span>
+                        </li>
+                    </ul>
+                </li>
+
+            </ol>
+    <footer class="developer-footer">
+        <p>Developed by:</p>
+        <ul class="developer-names">
+            <li>Xian Angel B. Palomares</li>
+            <li>Timothy Allen N. Sicad</li>
+            <li>Jann Nicole C. San Jose</li>
+            <li>Aivee Jean G. Varias</li>
+            <li>2025</li>
+
+        </ul>
+    </footer>
+
+            
+        </div>
+    
+    <script src="{{ url_for('static', filename='cssDocumentation/script.js') }}"></script> 
+
+
+</body>
+</html>
